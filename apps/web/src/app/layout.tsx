@@ -13,6 +13,27 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
+      <head>
+        <style>{`
+          .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+          }
+          .skip-link:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            padding: 8px 16px;
+            background: #000000;
+            color: #ffffff;
+            outline: 3px solid #005a9c;
+          }
+        `}</style>
+      </head>
       <body
         style={{
           margin: 0,
@@ -23,31 +44,7 @@ export default function RootLayout({
           lineHeight: '1.6',
         }}
       >
-        <a
-          href="#contenido-principal"
-          style={{
-            position: 'absolute',
-            left: '-9999px',
-            top: 'auto',
-            width: '1px',
-            height: '1px',
-            overflow: 'hidden',
-          }}
-          onFocus={(e) => {
-            e.currentTarget.style.position = 'static';
-            e.currentTarget.style.width = 'auto';
-            e.currentTarget.style.height = 'auto';
-            e.currentTarget.style.padding = '8px 16px';
-            e.currentTarget.style.background = '#000000';
-            e.currentTarget.style.color = '#ffffff';
-          }}
-          onBlur={(e) => {
-            e.currentTarget.style.position = 'absolute';
-            e.currentTarget.style.left = '-9999px';
-            e.currentTarget.style.width = '1px';
-            e.currentTarget.style.height = '1px';
-          }}
-        >
+        <a href="#contenido-principal" className="skip-link">
           Saltar al contenido principal
         </a>
         {children}
