@@ -1,0 +1,15 @@
+{
+  "name": "@cafeteria/shared",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "lint": "echo 'No lint needed for shared'",
+    "test": "echo 'No tests needed for shared'",
+    "build": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}
