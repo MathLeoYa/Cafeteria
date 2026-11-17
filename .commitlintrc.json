@@ -1,0 +1,28 @@
+{
+  "extends": ["@commitlint/config-conventional"],
+  "rules": {
+    "scope-enum": [
+      2,
+      "always",
+      [
+        "root",
+        "api",
+        "web",
+        "worker",
+        "shared",
+        "ci",
+        "deps",
+        "identidad",
+        "clientes",
+        "catalogo",
+        "promociones",
+        "carrito",
+        "pedidos",
+        "pagos",
+        "notificaciones",
+        "reportes"
+      ]
+    ],
+    "scope-empty": [1, "never"]
+  }
+}
