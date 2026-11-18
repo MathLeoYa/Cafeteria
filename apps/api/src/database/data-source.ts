@@ -1,4 +1,5 @@
-﻿import { DataSource } from "typeorm";
+import { CreateIdentityAccounts1763481600001 } from "./migrations/1763481600001-CreateIdentityAccounts";
+import { DataSource } from "typeorm";
 import { CreateIdentityAndCustomersSchemas1763481600000 } from "./migrations/1763481600000-CreateIdentityAndCustomersSchemas";
 
 const required = [
@@ -24,5 +25,8 @@ export const AppDataSource = new DataSource({
   database: process.env.DB_DATABASE,
   synchronize: false,
   migrationsTableName: "typeorm_migrations",
-  migrations: [CreateIdentityAndCustomersSchemas1763481600000],
+  migrations: [
+    CreateIdentityAndCustomersSchemas1763481600000,
+    CreateIdentityAccounts1763481600001,
+  ],
 });
