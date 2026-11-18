@@ -1,3 +1,4 @@
+import { CustomersModule } from "./customers/customers.module";
 import { IdentityModule } from "./identity/identity.module";
 import { Module } from "@nestjs/common";
 import { ConfigModule, ConfigService } from "@nestjs/config";
@@ -6,6 +7,7 @@ import { HealthController } from "./health/health.controller";
 
 @Module({
   imports: [
+    CustomersModule,
     IdentityModule,
     ConfigModule.forRoot({
       isGlobal: true,
