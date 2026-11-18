@@ -1,3 +1,4 @@
+import { CreateEmailVerificationTokens1763481600002 } from "./migrations/1763481600002-CreateEmailVerificationTokens";
 import { CreateIdentityAccounts1763481600001 } from "./migrations/1763481600001-CreateIdentityAccounts";
 import { DataSource } from "typeorm";
 import { CreateIdentityAndCustomersSchemas1763481600000 } from "./migrations/1763481600000-CreateIdentityAndCustomersSchemas";
@@ -28,5 +29,6 @@ export const AppDataSource = new DataSource({
   migrations: [
     CreateIdentityAndCustomersSchemas1763481600000,
     CreateIdentityAccounts1763481600001,
+    CreateEmailVerificationTokens1763481600002,
   ],
 });

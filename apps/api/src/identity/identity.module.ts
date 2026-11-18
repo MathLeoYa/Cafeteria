@@ -4,10 +4,11 @@ import { Account } from "./entities/account.entity";
 import { Credential } from "./entities/credential.entity";
 import { IdentityController } from "./identity.controller";
 import { IdentityService } from "./identity.service";
+import { EmailVerificationService } from "./email-verification.service";
 
 @Module({
   imports: [TypeOrmModule.forFeature([Account, Credential])],
   controllers: [IdentityController],
-  providers: [IdentityService],
+  providers: [IdentityService, EmailVerificationService],
 })
 export class IdentityModule {}
